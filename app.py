@@ -21,7 +21,7 @@ class FrameWorkApp:
 
             parsed = parse(path, request.path)
             if parsed is not None:
-                handler(request, res, **parsed.named)
+                handler(request, res, parsed.named)
                 return res
 
         res.status_code = 404
